@@ -1,3 +1,4 @@
+// Header role switcher using the custom Select
 import React from 'react';
 import Select from './Select';
 
@@ -10,7 +11,7 @@ interface Props {
 
 const RoleSwitcher: React.FC<Props> = ({ role, setRole }) => (
   <Select value={role} onChange={(v) => setRole(v as Role)} placeholder="Role">
-    <Select.Trigger />
+    <Select.Trigger className="pill-trigger" />
     <Select.Content>
       <Select.Item value="PUBLIC">Public</Select.Item>
       <Select.Item value="ADMIN">Admin</Select.Item>

@@ -3,5 +3,35 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans;
+  @apply font-sans bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased;
+}
+
+/* Design tokens and utilities */
+@layer utilities {
+  .card { @apply bg-white/90 dark:bg-gray-900/80 backdrop-blur rounded-xl border border-gray-200/70 dark:border-gray-800 shadow-sm; }
+  .card-padding { @apply p-4 sm:p-6; }
+  .pill-trigger { @apply px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-gray-900/70 backdrop-blur text-sm hover:bg-white/90 dark:hover:bg-gray-900/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-950 transition; }
+  .btn { @apply inline-flex items-center justify-center gap-2 h-9 px-3 rounded-md text-sm font-medium border transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500/60; }
+  .btn-primary { @apply btn border-transparent bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-ghost { @apply btn border-transparent text-gray-700 dark:text-gray-200 hover:bg-gray-100/70 dark:hover:bg-gray-800/70; }
+  .btn-muted { @apply btn border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800; }
+  .input { @apply h-9 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 text-sm placeholder:text-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60; }
+  .label { @apply block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1; }
+  .helper { @apply text-xs text-gray-500 dark:text-gray-400; }
+  .table-base { @apply min-w-full text-sm; }
+  .th { @apply sticky top-0 bg-white dark:bg-gray-900 z-10 border-b border-gray-200 dark:border-gray-800 text-left p-2; }
+  .td { @apply p-2 border-b border-gray-100 dark:border-gray-800; }
+  .tr-hover { @apply hover:bg-gray-50 dark:hover:bg-gray-800/50; }
+  .shadow-elev { @apply shadow-lg shadow-gray-200/60 dark:shadow-black/20; }
+  .bg-popover { @apply bg-white dark:bg-gray-900; }
+  .select-item { @apply px-3 py-1.5 text-sm cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 outline-none; }
+  .section-title { @apply text-xl font-semibold tracking-tight; }
+  .page-title { @apply text-2xl sm:text-3xl font-semibold tracking-tight; }
+  .icon-btn { @apply inline-flex items-center justify-center h-9 w-9 rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .chip { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs border; }
+  .chip-muted { @apply chip border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200; }
+  .chip-blue { @apply chip border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-800 dark:bg-blue-950/30 dark:text-blue-300; }
+  .chip-green { @apply chip border-green-200 bg-green-50 text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-300; }
+  .chip-red { @apply chip border-red-200 bg-red-50 text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-300; }
+  .muted-surface { @apply bg-white/60 dark:bg-gray-900/60 border border-gray-200/70 dark:border-gray-800 rounded-xl; }
 }
